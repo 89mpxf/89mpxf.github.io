@@ -1,14 +1,139 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>mpxf</title>
-    <meta charset="utf-8"/>
-  </head>
-  <body style="margin:0;padding:0;">
-    <marquee direction="down" behavior="alternate" style="height:100%;width:100%;position:absolute;">
-      <marquee direction="left" behavior="alternate" style="width:100%;">
-        <h1 style="margin:0;padding:0;">Coming soon...</h1>
-      </marquee>
-    </marquee>
-  </body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cooper's github</title>
+    </head>
+    <body>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html,
+            body {
+                height: 100%;
+                width: 100%;
+            }
+
+            body {
+                background: linear-gradient(
+                    45deg,
+                    rgba(255, 0, 0, 1) 0%,
+                    rgba(255, 154, 0, 1) 10%,
+                    rgba(208, 222, 33, 1) 20%,
+                    rgba(79, 220, 74, 1) 30%,
+                    rgba(63, 218, 216, 1) 40%,
+                    rgba(47, 201, 226, 1) 50%,
+                    rgba(28, 127, 238, 1) 60%,
+                    rgba(95, 21, 242, 1) 70%,
+                    rgba(186, 12, 248, 1) 80%,
+                    rgba(251, 7, 217, 1) 90%,
+                    rgba(255, 0, 0, 1) 100%
+                );
+                font-family: 'Comic Sans MS', cursive, sans-serif;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 3em;
+                margin-top: 200px;
+                animation: slideInDown 4s ease-in-out;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 2em;
+                margin-top: 50px;
+                animation: slideInDown 9s ease-in-out;
+            }
+
+            button {
+                margin-left: 500px;
+                padding: 4rem;
+                font-size: 1.5rem;
+                border-radius: 5px;
+                font: inherit;
+                animation: slideInDown 10s ease-in-out;
+            }
+            button:hover {
+                background: red;
+                color: darkred;
+                cursor: not-allowed;
+            }
+            @keyframes slideInDown {
+                /* slide in while rotating 360 degrees */
+                0% {
+                    transform: translateY(-1000%) rotate(0deg);
+                }
+
+                100% {
+                    transform: translateY(0) rotate(360deg);
+                }
+            }
+
+            img {
+                animation: fadeIn 8s ease-in-out;
+                width: 900px;
+                height: 400px;
+                border: 9px solid red;
+            }
+
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+
+        </style>
+        <h1>copers git hub</h1>
+        <h2>welcome!!!!! enjyo</h2>
+        <button onclick="info()">click to find out more</button>
+        <img src="ss.png" id="ss">
+        <script>
+            function info() {
+                alert('welcome to my github page.');
+                alert('this is my first github page.');
+                alert('basically everything on this github is a shitpost.');
+                alert('i hope you enjoy it!!!!!!!!!!!!!!');
+            }
+
+            // when the image is clicked
+            document.getElementById('ss').onclick = function() {
+                src = document.getElementById('ss').src.split('/')[3];
+                console.log(src)
+                switch(src) {
+                    case 'ss.png':
+                        document.getElementById('ss').src = './terrydavis.png';
+                        break;
+                    case 'terrydavis.png':
+                        document.getElementById('ss').src = './terrydavis2.png';
+                        break;
+                    case 'terrydavis2.png':
+                        document.getElementById('ss').src = './terrydavis3.png';
+                        break;
+                    case 'terrydavis3.png':
+                        // crash the page
+                        let i;
+                        while(true) { 
+                            i++;
+                        }
+                    default:
+                        document.getElementById('ss').src = './terrydavis.png';
+                        break;
+                }
+                
+            }
+        </script>
+    </body>
 </html>
